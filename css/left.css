@@ -1,0 +1,139 @@
+/* ========== header部分 ========== */
+#header {
+  display: flex;
+  background-color: #63AFF4;
+  height: 5vh;
+  width: 100vw;
+}
+
+#place, #page_name, #time {
+  text-align: center;
+  color: white;
+  font-size: 140%;
+  margin: auto;
+  width: calc(100%/3);
+}
+
+/* header 以下 */
+#container {
+  display: flex;
+  text-align: center;
+  height: 91vh;
+  margin: 2vh 0;
+  width: 100%;
+}
+
+/* ==========  左側 ========== */
+#left_box {
+  display: flex;
+  margin: 0 1vw;
+  background-color: #F3F3F3;
+  width: 39vw;
+  flex-direction: column;
+  text-align: left;
+  height: 91vh;
+}
+
+#net_information_message {
+  margin: 0 0 0 1vw;
+  padding: 1vh 0 0 0;
+  height: 4vh;
+}
+
+#images {
+  text-align: center;
+}
+
+#underwater_image, #marine_image {
+  width: 31vw;
+  height: 31vh;
+  margin: 0 0 1vh 0;
+}
+
+/* ---------- 画像上の文字部分 ---------- */
+#underwater_image_box, #marine_image_box {
+  position: relative;
+}
+
+#underwater_image_time, #marine_image_time {
+  position: absolute;/*絶対配置*/
+  color: black;/*文字は白に*/
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  font-size: 110%;
+  background-color: #E5E5E5;
+  width: 31vw;
+  opacity: 0.58;
+}
+
+
+
+#weather_information {
+  width: 36vw;
+  height: 18vh;
+  margin: 0 auto;
+  background-color: white;
+  display: flex;
+}
+
+/* ----------画面左下の方位画像部分 ---------- */
+#wind_dir_img_box {
+  position: relative;
+  width: calc(100%/4);
+  height: 20vh;
+  text-align: center;
+}
+
+#arrow {
+  position: absolute;/*絶対配置*/
+  top: 49%;
+  left: 50%;
+  width: 2vw;
+}
+
+#direction_img {
+  position: absolute;/*絶対配置*/
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 8vw;
+}
+
+
+/* 気象部分 */
+#wind_dir_message_box {
+  width: calc(100%/4);
+  height: 20vh;
+}
+
+#wind_dir_value {
+  text-align: center;
+  font-size: 3.5vh;
+  margin: 3vh 0;
+}
+
+#wind_dir_message, #wind_vel_message, #weather_box_message {
+  padding: 1vh 0;
+}
+
+#wind_vel_box {
+  width: calc(100%/4);
+  height: 20vh;
+}
+
+#wind_vel_value_message {
+  text-align: center;
+  font-size: 3.5vh;
+  margin: 3vh 0;
+}
+
+#weather_box {
+  width: calc(100%/4);
+  height: 20vh;
+}
+
+#weather_img {
+  width: 60%;
+  margin: 0 1vw;
+}

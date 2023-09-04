@@ -1,0 +1,18 @@
+/* 漁獲予測部分 */
+#fish_catch_prediction_box {
+  background-color: #F3F3F3;
+  height: 35vh;
+  width: 58vw;
+  text-align: left;
+}
+
+#fish_catch_prediction_message {
+  margin: 0 0 0 1vw;
+  padding: 1vh 0 2vh 0;
+}
+
+#fish_catch_prediction_chart {
+  margin: 0 auto;
+  width: 42vw;
+  height: 39vh;
+}

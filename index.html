@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <link rel="stylesheet" href="./css/header.css">
+  <link rel="stylesheet" href="./css/left.css">
+  <link rel="stylesheet" href="./css/plot.css">
+  <link rel="stylesheet" href="./css/map.css">
+  <link rel="stylesheet" href="./css/fish_catch.css">
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.bundle.js"></script>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <title>定置網 ダッシュボード</title>
+</head>
+<body>
+  <div id="header">
+
+    <!-- 取材用 -->
+    <!-- <input id="next_day" type="submit" value="日切り替え">
+    <input id="hour_ago" type="submit" value="1時間前">
+    <input id="hour_later" type="submit" value="1時間後"> -->
+    
+    <div id="place"></div>
+    <div id="page_name">ダッシュボード</div>
+    <div id="time"></div> 
+  </div>
+
+  <div id="container">
+    <!-- 左列の画像の列 -->
+    <div id="left_box">
+      <p id="net_information_message">網と周辺の状況</p>
+      <div id="images">
+        <div id="underwater_image_box">
+          <p id="underwater_image_time"></p>
+          <img id="underwater_image" src="./images/no_img.png" alt="水中画像">
+          <!-- <p id="underwater_image_time">2022-03-20 16:21:41</p> -->
+          <!-- <img id="underwater_image" src="./images/temp_img/a4.jpeg" alt="水中画像"> -->
+        </div>
+        <div id="marine_image_box">
+          <p id="marine_image_time"></p>
+          <img id="marine_image" src="./images/no_img.png" alt="水上画像">
+          <!-- <p id="marine_image_time">2022-03-20 16:32:51</p> -->
+          <!-- <img id="marine_image" src="./images/temp_img/b4.jpeg" alt="水上画像"> -->
+        </div>
+      </div>
+      <!-- 左列下 -->
+      <div id="weather_information">
+        <div id="wind_dir_img_box">
+          <img id="direction_img" src="./images/wind_dir_img/direction.png" alt="方位の画像"> 
+          <img id="arrow" src="" alt="矢印の画像">
+        </div>
+        <div id="wind_dir_message_box">
+          <p id="wind_dir_message">方位</p>
+          <p id="wind_dir_value"></p>
+        </div>
+        <div id="wind_vel_box">
+          <p id="wind_vel_message">風速</p>
+          <p id="wind_vel_value_message"><span id="wind_vel_value"></span>m/s</p>
+        </div>
+        <div id="weather_box">
+          <p id="weather_box_message">天気</p>
+          <img id="weather_img" src="" alt="天気画像">
+        </div>
+      </div>
+    </div>
+    
+    <div id="right_box">
+      <!-- 右上 -->
+      <div id="right_up_container">
+        <!-- プロット部分 -->
+        <!-- 参考 https://memorva.jp/memo/html/chartjs_line_chart.php -->
+        <div id="detection_plot_box">
+          <div id="detection_plot">
+            <p id="detection_plot_message">魚検出のプロット</p>
+            <div style="text-align: center; ">
+              <p id="detection_plot_time"></p>
+              <div id="time_range">
+                <div id="time_marker"></div>
+                <div id="time_split"></div>
+              </div>
+            </div>
+          </div>
+          <div id="in_net_status">
+            <p id="in_net_status_message"></p>
+            <img id="in_net_prediction_img" src="" alt="入網状況の画像">
+            <p id="evaluation_overview"></p>
+          </div>
+        </div>
+        <!-- 操業記録 -->
+        <div id="operational_record_box">
+          <p id="operational_record_message">本日の出航状況：<span id="departure_time"></span></p>
+          <div id="map"></div>
+        </div>
+      </div>
+      <!-- 右下 -->
+      <div id="right_bottom_container">
+        <!-- <p id="fish_catch_prediction_message">漁獲予測</p> -->
+        <p id="fish_catch_prediction_message">水温</p>
+        <canvas id="fish_catch_prediction_chart"></canvas>
+      </div>
+    </div>
+    
+    
+  </div>
+
+  <script type="text/javascript">
+    function initMap() {
+      var opts = {
+        zoom: 15,
+        center: new google.maps.LatLng(35.709984,139.810703)
+      };
+      var map = new google.maps.Map(document.getElementById("map"), opts);
+    }
+  </script>
+  <script type="module" src="./js/main.js"></script>
+  <script type="text/javascript" src="./js/map.js"></script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjpcBI57XAEzvIqzNBEj4eIpVzRaRe93U&callback=initMap"></script>
+</body>
+</html>

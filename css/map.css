@@ -1,0 +1,34 @@
+/* 操業記録部分 */
+#operational_record_box {
+  text-align: left;
+  background-color: #f3f3f3;
+  height: 44vh;
+  width: 31vw;
+  margin: 0 1vw 2vh 1vw;
+}
+
+#operational_record_message {
+  margin: 0 0 0 1vw;
+  padding: 1vh 0;
+}
+
+#map_img {
+  width: 29vw;
+  margin: auto 1vw;
+  border: 0.2vw solid white;
+}
+
+#map {
+  width: 29vw;
+  height:36vh;
+  margin: auto 1vw;
+}
+
+/* googlemapの下の部分を削除 */
+.gmnoprint {
+  display: none;
+}
+
+.gm-style-cc {
+  display: none;
+}

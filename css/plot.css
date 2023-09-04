@@ -1,0 +1,71 @@
+/* プロット部分 */
+#detection_plot_box {
+  background-color: #F3F3F3;
+  margin: 0 0 2vh 0;
+  height: 44vh;
+  width: 26vw;
+  text-align: left;
+}
+
+#detection_plot {
+  height: 8vh
+}
+
+#detection_plot_message {
+  padding: 1vh 0;
+  margin: 0 0 0 1vw;
+}
+
+#time_range {
+  margin: 0 auto;
+  width: 24vw;
+  height: 3vh;
+}
+
+#time_marker {
+  margin: 0;
+  width: 24vw;
+  height: 1vh;
+  background-color: #ffffff;
+  display: flex;
+}
+
+#time_split {
+  margin: 0;
+  width: 24vw;
+  height: 2vh;
+  display: flex;
+} 
+
+/* #latest_detection_img_text {
+  margin: 4vh 0 0 1vw;
+  font-size: 1.5vh;
+}
+
+#latest_detection_img_time {
+  text-align: center;
+}
+
+#latest_detection_img {
+  width: 20vw;
+  height: 20vh;
+  text-align: center;
+} */
+
+/* ========== 入網状況の部分 ========== */
+#in_net_status_message {
+  margin: 10vh 0 0 1vw;
+}
+
+#in_net_prediction_img{
+  margin: 1vh auto;
+  height: 15vh;
+  width: 15vw;
+  display: flex;
+}
+
+#evaluation_overview {
+  display: flex;
+  justify-content: center;
+  font-size: 2vh;
+}
